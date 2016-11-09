@@ -20,7 +20,7 @@
 using namespace CGE;
 
 #ifndef XEGE_SHOW_FPS
-#define XEGE_SHOW_FPS 0
+#define XEGE_SHOW_FPS 1
 #endif
 
 namespace xege
@@ -161,6 +161,7 @@ namespace xege
 
 		static inline void release()
 		{
+			XEGEGeometryDrawer::cleanup();
 			delete s_wrapper;
 			s_wrapper = nullptr;
 		}
